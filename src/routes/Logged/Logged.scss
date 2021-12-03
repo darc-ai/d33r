@@ -1,0 +1,149 @@
+@import 'const';
+
+.logged {
+  padding: 0;
+
+  &__nav-bar {
+    float: left;
+    width: 100px;
+    height: 100vh;
+    background: $dark;
+
+    ul, li {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      text-align: center;
+      font-size: 25px;
+      padding-left: 10px;
+
+      a {
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 12px;
+        text-decoration: none;
+      }
+
+      a.active {
+        background: $dark-lighten;
+        position: relative;
+        z-index: 1;
+        border-radius: 5px 0 0 5px;
+        box-shadow: $nav-bar-shadow;
+      }
+
+      .fa {
+        color: #fff;
+      }
+
+      .badge {
+        position: relative;
+
+        span {
+          right: 1px;
+          top: -3px;
+          min-width: 22px;
+          line-height: 22px;
+          position: absolute;
+          background: $red;
+          color: #fff;
+          border-radius: 50%;
+          font-size: 11px;
+          padding: 0px 2px;
+        }
+
+        &--gold i {
+          color: gold;
+          text-shadow: 0px 0px 4px gold;
+        }
+      }
+    }
+
+    .separator {
+      height: 1px;
+      background: #5b6069;
+      padding: 0;
+    }
+
+    .logout {
+      cursor: pointer;
+    }
+  }
+
+  .profile {
+    .avatar {
+      display: inline-block;
+    }
+
+    .name {
+      font-size: 14px;
+      color: #fff;
+    }
+
+    &__plus,
+    &__gold {
+      font-size: 12px;
+    }
+
+    &__plus {
+      color: $red;
+    }
+
+    &__gold {
+      color: #ffcc00 !important;
+    }
+  }
+
+  &__content {
+    margin-left: 100px;
+    height: 100%;
+  }
+
+  .with-changelog {
+    position: relative;
+
+    #changelog {
+      position: absolute;
+      top: -7px;
+      z-index: 10;
+      left: 5px;
+    }
+  }
+
+  &__coffee-wrapper {
+    width: 75px;
+    font-size: 12px;
+    color: #fff;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__coffee {
+    position: fixed;
+    bottom: 5px;
+  }
+
+  &__github {
+    position: fixed;
+    bottom: 70px;
+  }
+
+  &__coffee-icon {
+    display: inline-block;
+    width: 40px;
+    margin-left: 5px;
+  }
+
+  &__coffee-text {
+    margin-top: 6px;
+  }
+}
+
+.not-logged {
+  text-align: center;
+}

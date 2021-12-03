@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.DS_Store
+dist
+*.swp
+.vscode
+yarn-error.log
+flow-typed
+.idea
+node
+target

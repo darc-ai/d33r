@@ -1,0 +1,65 @@
+@import 'const';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Poppins:400,700&subset=latin-ext');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  min-height: 100vh;
+}
+
+body {
+  background: $gray;
+  font-family: $font-poppins;
+  font-size: 14px;
+  color: $font-color;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid lighten($blue, 20);
+  background: #fff;
+  outline: none;
+  border-radius: 5px;
+  resize: vertical;
+  padding: 5px;
+  font-size: 16px;
+
+  &:focus {
+    border-color: $blue;
+  }
+}
+
+.slick-slider {
+  .slick-next,
+  .slick-prev {
+    height: 100%;
+    width: 30px;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-prev {
+    left: 0;
+    z-index: 1;
+  }
+
+  .slick-dots {
+    li button:before {
+      font-size: 9px;
+      opacity: 0.5;
+    }
+
+    li.slick-active button:before {
+      opacity: 1
+    }
+  }
+}

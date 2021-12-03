@@ -1,0 +1,120 @@
+@import 'const';
+
+.person-view {
+  height: 100%;
+  width: 820px;
+  margin: 20px auto;
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__name {
+    font-size: 30px;
+  }
+
+  &__left {
+    width: 290px;
+    height: 500px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+
+  &__bio {
+    height: 100%;
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 3px solid #bababa;
+  }
+
+  &__gallery {
+    margin-left: 300px;
+  }
+
+  &__info {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+  &__buttons {
+    flex: 0 1 auto;
+  }
+
+  &__lists {
+    margin: 10px 0;
+
+    ul {
+      margin-bottom: 10px;
+      border-bottom: 1px solid $gray;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    li {
+      margin: 4px 0;
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  &__connections-header:first-child {
+    display: block;
+    border: none;
+    padding: 0;
+    font-size: 13px;
+    color: $font-color;
+  }
+
+  &__connections {
+    margin-top: 40px;
+    li {
+      display: inline-block;
+      padding: 4px 11px;
+      border: 1px solid $blue;
+      color: $blue;
+      border-radius: 10px;
+      font-size: 11px;
+      margin-right: 3px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__fb-search {
+    font-size: 21px;
+    color: #3b5998;
+    margin-right: 9px;
+    vertical-align: middle;
+  }
+
+  &__insta {
+    text-align: center;
+    margin-top: 40px;
+
+    a {
+      display: inline-block;
+      color: $accent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 7px;
+    }
+
+    .fa {
+      font-size: 80px;
+    }
+  }
+}

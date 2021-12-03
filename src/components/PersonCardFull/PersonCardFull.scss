@@ -1,0 +1,130 @@
+@import 'const';
+
+$wrapper-width: 1000;
+$content-width: 400;
+
+.person-card-full {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px 5px;
+  width: #{$wrapper-width}px;
+  display: flex;
+
+  &__gallery {
+    width: #{$wrapper-width - $content-width}px;
+    order: 2;
+  }
+
+  &__content {
+    width: #{$content-width}px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    background: #fff;
+    padding-top: 30px;
+  }
+
+  &__name {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__seen-min {
+    font-size: 11px;
+    font-weight: normal;
+  }
+
+  &__bio {
+    font-family: $font-lato;
+    margin: 12px 12px 12px;
+    border-top: 1px solid $primary-color-light;
+    padding-top: 12px;
+    font-size: 12px;
+    overflow: hidden;
+    flex-grow: 2;
+  }
+
+  &__details {
+    line-height: 22px;
+    h1 {
+      font-size: 18px;
+
+      span {
+        color: $blue;
+      }
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  &__schools {
+    margin: 10px 0;
+  }
+
+  &__employ {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+    white-space: nowrap;
+    background: $primary-color-light;
+    border-bottom: 1px solid #fff;
+
+    > span {
+      padding: 8px 5px;
+      display: none;
+    }
+
+    &__actions {
+      height: 100%;
+      // display: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    font-size: 13px;
+    background: $primary-color-light;
+
+    &--distance,
+    &--instagram {
+      align-self: center;
+      padding: 8px;
+    }
+
+    &--instagram {
+      i {
+        font-size: 28px;
+        color: gray;
+      }
+
+      a i {
+        color: $green;
+      }
+
+      a {
+        text-decoration: none;
+        color: $green;
+        display: block;
+      }
+    }
+  }
+}
+
+.person-card {
+  &:hover & {
+    &__employ {
+      > span {
+        display: none;
+      }
+
+      &__actions {
+        display: block;
+      }
+    }
+  }
+}

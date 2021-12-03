@@ -1,0 +1,47 @@
+@import 'const';
+
+.action-buttons {
+  display: flex;
+  height: 100%;
+
+  &__button {
+    flex: 1;
+    border-right: 1px solid #fff;
+    color: #616d7a;
+    text-align: center;
+    position: relative;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &__timer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $red;
+    font-size: 20px;
+    z-index: 10;
+  }
+
+  &--large {
+    .action-button {
+      font-size: 30px;
+    }
+
+    .action-buttons__likes-remaining {
+      font-size: 15px;
+    }
+  }
+
+  &__likes-remaining {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $primary-color-light;
+    font-size: 8px;
+    top: 50%;
+  }
+}

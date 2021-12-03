@@ -1,0 +1,47 @@
+@import 'const';
+
+.message-input {
+  height: 100%;
+  padding: 10px;
+  background: #fbfcfd;
+  border-top: 1px solid #dde1e3;
+
+  &__input {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    height: 100px;
+  }
+
+  textarea {
+    font-size: 14px;
+    resize: none;
+    padding: 4px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #7f7f7d;
+    background: transparent;
+    padding-right: 74px;
+    font-family: $font-lato;
+  }
+
+  &__controls {
+    padding: 5px 0;
+  }
+
+  &__controls-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 0;
+
+    i {
+      opacity: .6;
+    }
+  }
+}

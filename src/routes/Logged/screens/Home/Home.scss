@@ -1,0 +1,93 @@
+@import 'const';
+
+.home {
+  position: relative;
+  height: 100vh;
+
+  &__persons-cards {
+    padding: 5px;
+  }
+
+  &__settings {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    &__wrapper {
+      display: none;
+      background: #fff;
+      width: 300px;
+      padding: 10px;
+    }
+
+    &__trigger {
+      background: #fff;
+      padding: 10px;
+      margin: 0 auto;
+      width: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    background: $gray;
+    min-height: 100%;
+  }
+
+  &__persons-cards > div {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__persons-cards--main {
+    display: block !important;
+    margin-bottom: 25px;
+  }
+
+  &__refresh-button {
+    border: none;
+    background: transparent;
+    margin-left: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &__sidebar-item {
+    line-height: 21px;
+  }
+
+  &__sidebar-item-distance {
+    margin-bottom: 30px;
+    padding: 0 20px !important;
+
+    span {
+      font-family: $font-lato;
+    }
+  }
+
+  &__sidebar-item-distance label {
+    margin-bottom: 15px;
+  }
+
+  &__sidebar-cuts {
+    text-align: center;
+    label {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  .notifications-tc {
+    width: 70% !important;
+    margin: 0 auto !important;
+    transform: translateX(-50%);
+
+    .notification {
+      border-top: none !important;
+      height: auto !important;
+    }
+  }
+}

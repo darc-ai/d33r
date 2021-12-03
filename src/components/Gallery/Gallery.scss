@@ -1,0 +1,15 @@
+.gallery {
+  &__scrolling-area {
+    &--image {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+    }
+  }
+}
+
+.person-card .gallery__slider {
+  .slick-track {
+    height: 220px;
+  }
+}

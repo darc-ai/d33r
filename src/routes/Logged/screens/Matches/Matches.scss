@@ -1,0 +1,43 @@
+@import 'const';
+
+$width: 300px;
+
+.matches {
+  background: #fff;
+  height:  calc(100vh - 60px - 61px);
+
+  &__wrapper {
+    height: 100%;
+    width: $width;
+    float: left;
+    overflow: hidden;
+  }
+
+  &__filters {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list {
+    height: 100%;
+  }
+
+  &__conversation {
+    width: calc(100% - #{$width});
+    height: 100%;
+    margin-left: $width;
+    background: $gray;
+  }
+
+  .emergency-info {
+    white-space: normal;
+    color: #8e4b4b;
+
+    a {
+      color: lighten($red, 30);
+      cursor: pointer;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  }
+}
