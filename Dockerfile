@@ -1,12 +1,18 @@
-FROM adoptopenjdk/openjdk16:alpine-jre
+#
+# Build stage
+#
+FROM maven:3.6.2-jdk-11-slim AS build
 
 COPY . /home/app
 
 RUN mvn -f /home/app/pom.xml clean package
+#
+# Package stage
+#
+FROM adoptopenjdk/openjdk16:alpine-jre
 
-COPY  target/*.jar /home/app/app.jar
+COPY --from=build  /home/app/target/*.jar /home/app/app.jar
 
-# Run the web service on container startup.
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/home/app/app.jar"]
 
