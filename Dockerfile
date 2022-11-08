@@ -5,9 +5,9 @@
 
 FROM maven:3.8.3-openjdk-16 As build
 
-RUN apt-get update && apt-get install python -y
+RUN apk add --update python
 
-RUN apt-get update && apt-get install build-essential -y
+RUN apk add --update build-essential
 
 COPY . /home/app
 
