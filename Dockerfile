@@ -3,6 +3,8 @@
 #
 FROM maven:3.6.2-jdk-11-slim AS build
 
+RUN apt-get update || : && apt-get install python -y
+
 COPY . /home/app
 
 RUN mvn -f /home/app/pom.xml clean package
