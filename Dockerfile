@@ -18,5 +18,5 @@ RUN mvn -f /home/app/pom.xml clean package
 FROM openjdk:11-jre-slim
 COPY --from=build /home/app/target/*.jar /home/app/app.jar
 
-# Just use
+# Just use entrypoint without expose any port, use EXPOSE port if necessary
 ENTRYPOINT ["java","-jar","/home/app/app.jar"]

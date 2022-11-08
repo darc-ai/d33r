@@ -32,7 +32,7 @@ To be able to run app you have to have installed [Chrome Extension]( https://chr
 If you are build your own Extension remember to change Extension ID in `src/const/index.js` by replacing value in `originalId`.
 
 
-##Updates from niko247
+## Updates from niko247
 Update src/const/index.js with version of extension you added in assets. 
 
 Run 
