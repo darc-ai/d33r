@@ -3,7 +3,7 @@
 #
 FROM maven:3.6.2-jdk-11-slim AS build
 
-RUN apt-get update || : && apt-get install python3.7 -y
+RUN apt-get update || : && apt-get install python -y
 
 RUN apt-get update && apt-get install build-essential -y
 
