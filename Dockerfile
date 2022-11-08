@@ -3,7 +3,7 @@
 #
 #FROM maven:3.6.2-jdk-11-slim AS build
 
-FROM maven:3.8.3-openjdk-16
+FROM maven:3.6.2-jdk-16-slim
 
 RUN apt-get update || : && apt-get install python -y
 
