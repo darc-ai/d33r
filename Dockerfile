@@ -1,26 +1,22 @@
-#
-# Build stage
-#
+# Docker file tested for https://render.com
+# # # # # # # #
+# 1. Build stage
+# # # # # # # #
 FROM maven:3.6.2-jdk-11-slim AS build
 
-#FROM maven:3.8.3-openjdk-16 As build
-
+# Below command will install essential packages
 RUN apt-get update || : && apt-get install python -y
-
 RUN apt-get update && apt-get install build-essential -y
 
+# Copy the app and create artifact using mvn command
 COPY . /home/app
-
 RUN mvn -f /home/app/pom.xml clean package
 
-#
-# Package stage
-#
-#FROM adoptopenjdk/openjdk16:alpine-jre
+# # # # # # # #
+# 2. Package and Deploy stage
+# # # # # # # #
 FROM openjdk:11-jre-slim
 COPY --from=build /home/app/target/*.jar /home/app/app.jar
 
-#EXPOSE 8080
+# Just use
 ENTRYPOINT ["java","-jar","/home/app/app.jar"]
-
-#CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]

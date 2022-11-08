@@ -27,7 +27,8 @@ yarn run server
 ```
 
 ### Dependencies
-To be able to run app you have to have installed [Chrome Extension]( https://chrome.google.com/webstore/detail/tind3rcom-client/olicollicgbjgnialpnmnolopimdccon?hl=pl&authuser=1) or build from this repo [tind3r-chrome-extension](https://github.com/rlesniak/tind3r-chrome-extension).
+To be able to run app you have to have installed [Chrome Extension]( https://chrome.google.com/webstore/detail/tind3rcom-client/olicollicgbjgnialpnmnolopimdccon?hl=pl&authuser=1) or build from this repo [tind3r-chrome-extension](https://github.com/rlesniak/tind3r-chrome-extension) or zip file from assets folder [https://github.com/darc-ai/d33r/blob/main/assets/tind3r_0.4.4.zip].
+
 If you are build your own Extension remember to change Extension ID in `src/const/index.js` by replacing value in `originalId`.
 
 
@@ -66,3 +67,12 @@ Add codepipe line of github
 Click on deploy button
 
 After succesful build click on Open app
+
+
+### Serving on Render (https://render.com)
+
+Create a Webservice project and connect this repo
+
+Make sure to use Docker deployment
+
+For more info check Dockerfile
